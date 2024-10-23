@@ -1,4 +1,6 @@
-const uri = 'http://localhost:5129';
+// const uri = 'http://localhost:5129';
+const uri = 'api/todoitems';
+
 let todos = [];
 
 function getItems() {
