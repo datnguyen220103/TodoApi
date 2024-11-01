@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <form class="w-50">
+            <h1>CREATE TASK</h1>
+            <!-- (ngSubmit)="onSubmit()" #taskForm="ngForm" -->
+            <div class="form-group">
+                <label for="taskName">Name Task</label>
+                <input type="text" id="taskName" class="form-control" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="taskGroup">Group</label>
+                <input type="text" id="taskGroup" class="form-control" name="group">
+            </div>
+
+            <div class="form-group">
+                <label for="taskStatus">Status</label>
+                <select id="taskStatus" class="form-control" required name="status">
+                    <option value="false">Chưa hoàn thành</option>
+                    <option value="true">Hoàn thành</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="taskPriority">Priority</label>
+                <select id="taskPriority" class="form-control" name="priority">
+                    <option value="1">1 (Cao)</option>
+                    <option value="2">2 (Trung bình)</option>
+                    <option value="3">3 (Thấp)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dueDate">Due Date</label>
+                <input type="date" id="dueDate" class="form-control" name="dueDate">
+            </div>
+
+            <div class="form-group">
+                <label for="description">description</label>
+                <textarea id="description" formControlName="description" class="form-control" rows="3"
+                    placeholder="Nhập mô tả công việc"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Add Task</button>
+        </form>
+    </div>
+</div>

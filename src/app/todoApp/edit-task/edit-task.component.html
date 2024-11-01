@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <form class="w-50">
+            <!-- (ngSubmit)="onSubmit()" #editTaskForm="ngForm" -->
+            <h1>TASK EDIT</h1>
+            <div class="form-group">
+                <label for="taskName">Name Task</label>
+                <input type="text" id="taskName" class="form-control" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="taskGroup">Group</label>
+                <input type="text" id="taskGroup" class="form-control" name="group">
+            </div>
+
+            <div class="form-group">
+                <label for="taskStatus">Status</label>
+                <select id="taskStatus" class="form-control" required name="status">
+                    <option value="not started">Chưa bắt đầu</option>
+                    <option value="in progress">Đang thực hiện</option>
+                    <option value="completed">Hoàn thành</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="taskPriority">Priority</label>
+                <select id="taskPriority" class="form-control" required name="priority">
+                    <option value="1">1 (Thấp)</option>
+                    <option value="2">2 (Trung bình)</option>
+                    <option value="3">3 (Cao)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dueDate">Due Date</label>
+                <input type="date" id="dueDate" class="form-control" required name="dueDate">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" formControlName="description" class="form-control" rows="3"
+                    placeholder="Nhập mô tả công việc"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Edit</button>
+            <!-- [disabled]="editTaskForm.invalid" -->
+        </form>
+    </div>
+</div>
